@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.item {
+  display: flex;
+  gap: 0.2em;
+}
+
+.item__done--tick::after {
+  content: "\2713";
+  color: green;
+  font-weight: bold;
+}
+
+.mesta {
+  color: cornflowerblue;
+  display: flex ;
+  padding: 10px;
+}
+
+.populace {
+  color: black;
+}
