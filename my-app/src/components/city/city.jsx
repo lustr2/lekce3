@@ -1,12 +1,13 @@
 const City = ({name, population, area, district, photo}) => {
-    const vetsiMesto = (Number({area}).valueOf > 100 ? "item__done--tick" : "");
-    return (
+    const vetsiMesto = (parseInt(area) > 100 ? "item__vetsi" : "item__normalni");
+      return (
         <div className="mesta">
-            <div>Nazev mesta: {name}</div>
-            <div className="populace"> - populace: {population} </div>
-            <div className={vetsiMesto}> - </div>
-            <div> Okres: {district} - </div>
-            <div> - <img src={photo}></img>  </div>
+            <h3>{name}</h3>
+            <div><img src={photo}></img></div>
+            <div className="populace"> Pocet obyvatel: {population} </div>
+            <div className={vetsiMesto}> Vetsi mesto:  </div>
+            <div> Okres: {district}</div>
+            
         </div>
     )
 }
